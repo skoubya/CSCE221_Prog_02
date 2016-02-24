@@ -237,10 +237,10 @@ class map {
     iterator find(const Key& k) {
       //finder returns a node, so...
       //we convert the node return val to an iterator return val
-      iterator result = iterator(finder(k));
-      if (*result.is_internal())
+      node* result = finder(k);
+      if (result->is_internal())
       {
-        return result;
+        return iterator(result);
       }
       else
       {
