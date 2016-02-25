@@ -199,7 +199,8 @@ class map {
     /// store unique elements, so if the element existed already it is returned.
     std::pair<iterator, bool> insert(const value_type& v) {
       /// @todo Implement insert. Utilize inserter helper.
-      return std::make_pair(end(), false);
+	  pair<node*, bool> ans = inserter(v); //gets answer from inserter
+      return std::make_pair(iterator(ans.first), ans.second); //returns ans except node changed to iterator
     }
     /// @brief Remove element at specified position
     /// @param position Position
@@ -253,7 +254,15 @@ class map {
     /// @return Iterator to position if found, cend() otherwise
     const_iterator find(const Key& k) const {
       /// @todo Implement find. Utilize the finder helper
-      return cend();
+      node* result = finder(k);
+      if (result->is_internal())
+      {
+        return iterator(result);
+      }
+      else
+      {
+        return end();
+      }
     }
 
     /// @brief Count elements with specific keys
@@ -284,7 +293,7 @@ class map {
     /// Base your algorithm off of Code Fragment 10.9 on page 436
     node* finder(const Key& k) const {
 	  
-	  node* curr = root->left;//tree is to left(??) of the superroot
+	  node* curr = root->left;//tree is to left of the superroot
 	  while (curr->is_internal() && k != (curr->value).first)
      //while isInternal is true, and k is not the value you're looking for
      //curr-value is a pair (standard library), and pair.first returns the first element of the pair
@@ -315,7 +324,18 @@ class map {
     /// Hint: Will need to use functions node::replace and node::expand
     std::pair<node*, bool> inserter(const value_type& v) {
       /// @todo Implement inserter helper function
-      return std::make_pair(nullptr, false);
+	  
+	  node* n = finder(v.first);
+	  if (n->is_internal()) //already exists
+	  {
+		  return std::make_pair(n, false);
+	  }
+	  else //doesn't exist
+	  {
+		  n->replace(v); //give value
+		  n->expand(); //give children
+		  return std::make_pair(n, true);
+	  }
     }
 
     /// @brief Erase a node from the tree
