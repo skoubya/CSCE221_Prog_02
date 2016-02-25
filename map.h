@@ -61,7 +61,6 @@ class map {
     /// @brief Copy constructor
     /// @param m Other map
     map(const map& m) : root(new node(*m.root)), sz(m.sz) {
-		std::cout<<"in copy"<<std::endl;//added by me
     }
     /// @brief Destructor
     ~map() {
@@ -173,7 +172,7 @@ class map {
       
 	  //should be fine because don't edit in this function
 	  iterator it = find(k);
-	  if (it == end())
+	  if (it == cend())
 	  {
 		throw std::out_of_range("Key doesn't Exist");//throw out of range exception  
 	  }
@@ -259,11 +258,11 @@ class map {
       node* result = finder(k);
       if (result->is_internal())
       {
-        return iterator(result);
+        return const_iterator(result);
       }
       else
       {
-        return end();
+        return cend();
       }
     }
 
@@ -275,7 +274,14 @@ class map {
     /// only return 1 or 0.
     size_t count(const Key& k) const {
       /// @todo Implement count. Utilize the find operation.
-      return 0;
+	  if(find(k) == cend()) //not found
+	  {
+		return 0;
+	  }
+	  else
+	  {
+		return 1;
+	  }
     }
 
     /// @}
@@ -397,7 +403,7 @@ class map {
 			right->parent = this;
 		}
 		
-		std::cout<<'\t'<<n.height<<std::endl; //added by me
+		//std::cout<<'\t'<<n.height<<std::endl; //added by me
       }
 
       /// @brief Copy assignment - Deleted
