@@ -61,6 +61,7 @@ class map {
     /// @brief Copy constructor
     /// @param m Other map
     map(const map& m) : root(new node(*m.root)), sz(m.sz) {
+		std::cout<<"in copy"<<std::endl;//added by me
     }
     /// @brief Destructor
     ~map() {
@@ -199,7 +200,8 @@ class map {
     /// store unique elements, so if the element existed already it is returned.
     std::pair<iterator, bool> insert(const value_type& v) {
       /// @todo Implement insert. Utilize inserter helper.
-	  pair<node*, bool> ans = inserter(v); //gets answer from inserter
+	  std::pair<node*, bool> ans = inserter(v); //gets answer from inserter
+	  if (ans.second) sz++;  //if element add worked add to size
       return std::make_pair(iterator(ans.first), ans.second); //returns ans except node changed to iterator
     }
     /// @brief Remove element at specified position
@@ -387,11 +389,15 @@ class map {
       /// @brief Copy constructor
       /// @param n node to perform deep copy from
       node(const node& n) : value(n.value), parent(nullptr), left(nullptr), right(nullptr), height(n.height) {
-		left = new node(*n.left);
-		right = new node(*n.right);
+		if (n.is_internal())
+		{
+			left = new node(*n.left);
+			left->parent = this;
+			right = new node(*n.right);
+			right->parent = this;
+		}
 		
-		/*added test stuff
-		std::cout<<'\t'<<n.height<<std::endl;*/
+		std::cout<<'\t'<<n.height<<std::endl; //added by me
       }
 
       /// @brief Copy assignment - Deleted
