@@ -207,7 +207,8 @@ class map {
     ///         one
     iterator erase(const_iterator position) {
     /// @todo this...
-      return end();
+      node* temp = new node(*position);
+      return eraser(temp);
     }
     /// @brief Remove element at specified position
     /// @param k Key
@@ -358,7 +359,7 @@ class map {
       
       //using find() to first see if node n even exists
       //(might not be correct? should I be using some variant of find()? - GH)
-      if (find(n) == end())
+      if (find(n->value.first) == end())
       {
         //error handling case - TODO
         return nullptr;
@@ -367,22 +368,22 @@ class map {
       else
       {
         //then node n exists, and we enter the next logic loop
-        if (n->left.is_external())
+        if ((n->left)->is_external())
         {
-          (n->left).remove_above_external();
+          (n->left)->remove_above_external();
         }
-        else if (n->right.is_external())
+        else if ((n->right)->is_external())
         {
-          (n->right).remove_above_external();
+          (n->right)->remove_above_external();
         }
         else
         {
-          node* y = (n->right).leftmost();
+          node* y = (n->right)->leftmost();
           node* x = y->left;
-          n.replace(y);
-          x.remove_above_external();
+          n->replace(y->value);
+          x->remove_above_external();
         }
-        return n.inorder_next();
+        return n->inorder_next();
       }
  
     }
