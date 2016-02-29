@@ -206,7 +206,7 @@ class map {
     /// @return Position of new location of element which was after eliminated
     ///         one
     iterator erase(const_iterator position) {
-      /// @todo Implement erase. Utilize eraser helper.
+    /// @todo this...
       return end();
     }
     /// @brief Remove element at specified position
@@ -361,6 +361,7 @@ class map {
       if (find(n) == end())
       {
         //error handling case - TODO
+        return nullptr;
       }
       
       else
@@ -378,12 +379,12 @@ class map {
         {
           node* y = (n->right).leftmost();
           node* x = y->left;
-          n = y;
+          n.replace(y);
           x.remove_above_external();
         }
+        return n.inorder_next();
       }
  
-      return nullptr;
     }
 
     /// @}
