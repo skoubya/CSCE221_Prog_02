@@ -5,9 +5,7 @@
 #include <stdexcept>
 #include <type_traits>
 #include <utility>
-#include <iostream>  //added by me
-
-//github test
+#include <iostream>  //added to test
 
 namespace mystl {
 
@@ -354,8 +352,37 @@ class map {
     ///
     /// Hint: will need to use functions node::inorder_next or node::leftmost,
     /// node::replace, and node::remove_above_external
+    //GH implemented this (questionably)
+    //compiles correctly with given makefile -- NO IDEA about running though
     node* eraser(node* n) {
-      /// @todo Implement eraser helper function
+      
+      //using find() to first see if node n even exists
+      //(might not be correct? should I be using some variant of find()? - GH)
+      if (find(n) == end())
+      {
+        //error handling case - TODO
+      }
+      
+      else
+      {
+        //then node n exists, and we enter the next logic loop
+        if (n->left.is_external())
+        {
+          (n->left).remove_above_external();
+        }
+        else if (n->right.is_external())
+        {
+          (n->right).remove_above_external();
+        }
+        else
+        {
+          node* y = (n->right).leftmost();
+          node* x = y->left;
+          n = y;
+          x.remove_above_external();
+        }
+      }
+ 
       return nullptr;
     }
 
