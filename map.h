@@ -207,8 +207,9 @@ class map {
     ///         one
     iterator erase(const_iterator position) {
     /// @todo this...
-      node* temp = new node(*position);
-      return eraser(temp);
+      node* temp = finder(position->first); //find node with sam 1st key
+	  sz--; //reduce size
+      return iterator(eraser(temp)); //make type change explicit
     }
     /// @brief Remove element at specified position
     /// @param k Key
@@ -359,10 +360,9 @@ class map {
       
       //using find() to first see if node n even exists
       //(might not be correct? should I be using some variant of find()? - GH)
-      if (find(n->value.first) == end())
+      if (n->is_external()) //find(n->value.first) == end())
       {
-        //error handling case - TODO
-        return nullptr;
+		throw std::out_of_range("Key doesn't Exist");//possibly incorrect throw
       }
       
       else
@@ -370,20 +370,19 @@ class map {
         //then node n exists, and we enter the next logic loop
         if ((n->left)->is_external())
         {
-          (n->left)->remove_above_external();
+          return (n->left)->remove_above_external(); //returns inorder next
         }
         else if ((n->right)->is_external())
         {
-          (n->right)->remove_above_external();
+          return (n->right)->remove_above_external(); //returns inorder next
         }
         else
         {
-          node* y = (n->right)->leftmost();
+          node* y = (n->right)->leftmost(); //is same a inorder next except doesn't go up
           node* x = y->left;
           n->replace(y->value);
-          x->remove_above_external();
+          return x->remove_above_external(); //returns inorder next
         }
-        return n->inorder_next();
       }
  
     }
