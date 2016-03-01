@@ -207,7 +207,7 @@ class map {
     ///         one
     iterator erase(const_iterator position) {
     /// @todo this...
-      node* temp = finder(position->first); //find node with sam 1st key
+      node* temp = position.n; //extract node
 	  sz--; //reduce size
       return iterator(eraser(temp)); //make type change explicit
     }
@@ -216,7 +216,17 @@ class map {
     /// @return Number of elements removed (in this case it is at most 1)
     size_t erase(const Key& k) {
       /// @todo Implement erase. Utilize finder and eraser helpers.
-      return 0;
+      node* temp = finder(k); //find node with same 1st key
+	  try //maybe not best way
+	  {
+		eraser(temp);
+		sz--; //reduce size
+		return 1; //no exception so an element was deleted
+	  }
+	  catch(std::out_of_range)
+	  {
+		return 0; // tried deleteing non-existant element so no deletion
+	  }
     }
     /// @brief Removes all elements
     void clear() noexcept {
@@ -360,7 +370,7 @@ class map {
       
       //using find() to first see if node n even exists
       //(might not be correct? should I be using some variant of find()? - GH)
-      if (n->is_external()) //find(n->value.first) == end())
+      if (n->is_external())
       {
 		throw std::out_of_range("Key doesn't Exist");//possibly incorrect throw
       }
