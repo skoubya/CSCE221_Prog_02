@@ -94,7 +94,7 @@ class map {
 		//std::cout<<theHeight<<std::endl;
 		std::vector<std::string> ans(numStrings);
 		printNode((root->left), 0, theHeight, ans);
-		for(size_t x = 0; x<numStrings; x++)
+		for(size_t x = 0; x<ans.size(); x++)
 		{
 			std::cout<<ans[x]<<std::endl;
 		}
@@ -103,32 +103,13 @@ class map {
 	size_t printNode (node* n, size_t line, size_t height, std::vector<std::string>& ans)
 	{
 		size_t charUsed = 0; //for spacing
-		size_t next = (-1 + std::sqrt(1+8*(ans.size()-line)))/2 + line;//index of where next number goes
+		size_t next = line+1;//index of where next number goes
 		//std::cout<<"line: "<<line<<" next: "<<next<<" ans.size: "<<ans.size()<<" Key: "<<std::to_string(n->value.first)<<std::endl;
 		/*Left tree*/
 		if ((n->left)->is_internal()) 
 		{
-			//std::cout<<"left is internal"<<std::endl;
 			size_t space = printNode(n->left, next, height, ans);
 			charUsed += space;
-			//std::cout<<"space: "<<space<<std::endl;
-			//std::cout<<"past left printNode"<<std::endl;
-			for (size_t x = line+1; x < next; x++)
-			{
-				for (size_t y = 0; y < charUsed; y++)
-				{
-					ans[x] +=" ";
-				}
-			}
-			for (size_t x = 1; x < next-line; x++) 
-			{
-				for (size_t y = line+1; y < ans.size(); y++) //all the way down
-				{
-					if (x == next-y) ans[y] += "/";
-					else ans[y] += " ";
-				}
-				charUsed++;
-			}
 		}
 		/* Middle */
 		for (size_t x =0; x<charUsed; x++)
@@ -149,21 +130,7 @@ class map {
 		/*Right tree*/
 		if ((n->right)->is_internal()) 
 		{
-			
-			//std::cout<<"right is internal"<<std::endl;
-			
-			
-			for (size_t x = 1; x < next-line; x++)
-			{
-				for (size_t y = line; y < ans.size(); y++) //space all the way down
-				{
-					if (x+line ==y) ans[y] += "\\"; 
-					else ans[y] += " ";
-				}
-				charUsed++;
-			}
 			size_t space = printNode(n->right, next, height, ans);
-			//std::cout<<"past right printNode"<<std::endl;
 			charUsed += space;
 			for (size_t x = line; x < next; x++)
 			{
