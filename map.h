@@ -1,3 +1,5 @@
+/*Aaron Skouby and Gerald Hu*/
+
 #ifndef _MAP_H_
 #define _MAP_H_
 
@@ -6,6 +8,9 @@
 #include <type_traits>
 #include <utility>
 #include <iostream>  //added to test
+#include <vector> //added to test
+#include <string> //added to test
+#include <cmath> //added to test
 
 namespace mystl {
 
@@ -80,6 +85,99 @@ class map {
     /// @}
     ////////////////////////////////////////////////////////////////////////////
 
+	
+	/*Added for testing purposes*/
+	void printTree()//node* r) //r is root of tree printing //maybe incorrect spot
+	{
+		size_t theHeight = (root->left)->height; //height
+		size_t numStrings = theHeight*(theHeight+1)/2; //adds lines for slashes of branches
+		//std::cout<<theHeight<<std::endl;
+		std::vector<std::string> ans(numStrings);
+		printNode((root->left), 0, theHeight, ans);
+		for(size_t x = 0; x<numStrings; x++)
+		{
+			std::cout<<ans[x]<<std::endl;
+		}
+	}
+	
+	size_t printNode (node* n, size_t line, size_t height, std::vector<std::string>& ans)
+	{
+		size_t charUsed = 0; //for spacing
+		size_t next = (-1 + std::sqrt(1+8*(ans.size()-line)))/2 + line;//index of where next number goes
+		//std::cout<<"line: "<<line<<" next: "<<next<<" ans.size: "<<ans.size()<<" Key: "<<std::to_string(n->value.first)<<std::endl;
+		/*Left tree*/
+		if ((n->left)->is_internal()) 
+		{
+			//std::cout<<"left is internal"<<std::endl;
+			size_t space = printNode(n->left, next, height, ans);
+			charUsed += space;
+			//std::cout<<"space: "<<space<<std::endl;
+			//std::cout<<"past left printNode"<<std::endl;
+			for (size_t x = line+1; x < next; x++)
+			{
+				for (size_t y = 0; y < charUsed; y++)
+				{
+					ans[x] +=" ";
+				}
+			}
+			for (size_t x = 1; x < next-line; x++) 
+			{
+				for (size_t y = line+1; y < ans.size(); y++) //all the way down
+				{
+					if (x == next-y) ans[y] += "/";
+					else ans[y] += " ";
+				}
+				charUsed++;
+			}
+		}
+		/* Middle */
+		for (size_t x =0; x<charUsed; x++)
+		{
+			ans[line] += " ";
+		}
+		std::string s = "(" + std::to_string(n->value.first) + "," + n->value.second + ")";
+		ans[line] += s;
+		for (size_t x = line+1; x<ans.size(); x++)
+		{
+			for(size_t y =0; y<s.size(); y++)
+			{
+				ans[x]+= " ";
+			}
+		}
+		charUsed += s.size();
+		
+		/*Right tree*/
+		if ((n->right)->is_internal()) 
+		{
+			
+			//std::cout<<"right is internal"<<std::endl;
+			
+			
+			for (size_t x = 1; x < next-line; x++)
+			{
+				for (size_t y = line; y < ans.size(); y++) //space all the way down
+				{
+					if (x+line ==y) ans[y] += "\\"; 
+					else ans[y] += " ";
+				}
+				charUsed++;
+			}
+			size_t space = printNode(n->right, next, height, ans);
+			//std::cout<<"past right printNode"<<std::endl;
+			charUsed += space;
+			for (size_t x = line; x < next; x++)
+			{
+				for (size_t y = 0; y < space; y++)
+				{
+					ans[x] +=" ";
+				}
+			}
+		}
+		return charUsed;
+	}
+	/*End Added for test purposes*/
+	
+	
     ////////////////////////////////////////////////////////////////////////////
     /// @name Iterators
     /// @{
@@ -216,8 +314,8 @@ class map {
     /// @return Number of elements removed (in this case it is at most 1)
     size_t erase(const Key& k) {
       /// @todo Implement erase. Utilize finder and eraser helpers.
-      node* temp = finder(k); //find node with same 1st key
-	  try //maybe not best way
+      node* temp = finder(k); //find node with same key
+	  try
 	  {
 		eraser(temp);
 		sz--; //reduce size
@@ -352,6 +450,12 @@ class map {
 	  {
 		  n->replace(v); //give value
 		  n->expand(); //give children
+		  node* temp = n;
+		  do
+		  {
+			temp->set_height(); //adjust node height
+			temp = temp->parent;
+		  }while(temp != nullptr);
 		  return std::make_pair(n, true);
 	  }
     }
