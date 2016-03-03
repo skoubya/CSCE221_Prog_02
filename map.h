@@ -640,6 +640,76 @@ class map {
       ///       code reusability.
       node* restructure() {
         /// @todo Implement restructuring
+		bool yB4z = false;
+		node*  y; //this == z so don't need to name
+		if (left->height > right->height) 
+		{
+			y = left;
+			yB4z =true;
+		}
+		else 
+		{
+			y = right;
+		}
+		
+		bool xB4y = false;
+		node* x;
+		if (y->left->height > y->right->height)
+		{
+			x = y->left;
+			xB4y = true;
+		}
+		else 
+		{
+			x = y->right;
+		}
+		
+		node* a, b, c, s0, s1, s2, s3; //s are subtrees
+		if(yB4z == xB4y)
+		{
+			b = y;
+			if (yB4z)
+			{
+				a = x;
+				c = this;
+				s0 = x->left;
+				s1 = x->right;
+				s2 = y->right;
+				s3 = right;
+			}
+			else
+			{
+				a = this;
+				c = x;
+				s0 = left;
+				s1 = y->left;
+				s2 = x->left;
+				s3 = x->right;
+			}
+		}
+		else
+		{
+			b = x;
+			s1 = x->left;
+			s2 = x->right;
+			if (yB4z)
+			{
+				a = y;
+				c = this;
+				s0 = y->left;
+				s3 = right;
+			}
+			else
+			{
+				a = this;
+				c = y;
+				s0 = left;
+				s3 = y->right;
+			}
+		}
+		
+		//move the nodes around
+		
         return this;
       }
 
