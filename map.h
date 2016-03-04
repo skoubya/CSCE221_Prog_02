@@ -87,12 +87,10 @@ class map {
 
 	
 	/*Added for testing purposes*/
-	void printTree()//node* r) //r is root of tree printing //maybe incorrect spot
+	void printTree() //maybe incorrect spot
 	{
 		size_t theHeight = (root->left)->height; //height
-		size_t numStrings = theHeight*(theHeight+1)/2; //adds lines for slashes of branches
-		//std::cout<<theHeight<<std::endl;
-		std::vector<std::string> ans(numStrings);
+		std::vector<std::string> ans(theHeight);
 		printNode((root->left), 0, theHeight, ans);
 		for(size_t x = 0; x<ans.size(); x++)
 		{
@@ -104,7 +102,6 @@ class map {
 	{
 		size_t charUsed = 0; //for spacing
 		size_t next = line+1;//index of where next number goes
-		//std::cout<<"line: "<<line<<" next: "<<next<<" ans.size: "<<ans.size()<<" Key: "<<std::to_string(n->value.first)<<std::endl;
 		/*Left tree*/
 		if ((n->left)->is_internal()) 
 		{
@@ -422,7 +419,8 @@ class map {
 		  {
 			temp->set_height(); //adjust node height
 			temp = temp->parent;
-		  }while(temp != nullptr);
+		  }while(!temp->is_root());
+		  n->rebalance(); //fix misbalances
 		  return std::make_pair(n, true);
 	  }
     }
@@ -449,21 +447,24 @@ class map {
       else
       {
         //then node n exists, and we enter the next logic loop
+		node* ans = nullptr; //value to be returned (temporarily nullptr)
         if ((n->left)->is_external())
         {
-          return (n->left)->remove_above_external(); //returns inorder next
+          ans = (n->left)->remove_above_external(); //returns inorder next
         }
         else if ((n->right)->is_external())
         {
-          return (n->right)->remove_above_external(); //returns inorder next
+          ans = (n->right)->remove_above_external(); //returns inorder next
         }
         else
         {
           node* y = (n->right)->leftmost(); //is same a inorder next except doesn't go up
           node* x = y->left;
           n->replace(y->value);
-          return x->remove_above_external(); //returns inorder next
+          ans = x->remove_above_external(); //returns inorder next
         }
+		ans->rebalance(); //fixes misbalances
+		return ans;
       }
  
     }
@@ -628,6 +629,16 @@ class map {
       ///       set_height()
       void rebalance() {
         /// @todo Implement resbalancing
+		node* z = this; //looking for unbalanced node z
+		while (!z->is_root())
+		{
+			if (!z->balanced()) 
+			{
+				(z->tall_grand_child())->restructure(); //function works on unbalanced node's tallest grandchild
+			}
+			z = z->parent;
+			z->set_height(); //adjust heights as goes up
+		}
       }
 
       /// @brief Restructuring the tri-node structure's balance where
@@ -640,16 +651,18 @@ class map {
       ///       code reusability.
       node* restructure() {
         /// @todo Implement restructuring
-		
-		if (left->height > right->height) //larger on left
+		node* y = parent; //name so don't lose after rotate
+		node* z = y->parent; //name so don't lose after rotate
+		//x is this
+		if (y == z->left) //larger on left
 		{
-			if (left->left->height < left->right->height) left->rotate_left(); //needs double rotate (2nd is larger on right)
-			return rotate_right();
+			if (this == y->right) y->rotate_left(); //needs double rotate (2nd is larger on right)
+			return z->rotate_right();
 		}
 		else //larger on right
 		{
-			if (left->left->height > left->right->height) right->rotate_right(); //needs double rotate (2nd is larger on left)
-			return rotate_left();
+			if (this == y->left) y->rotate_right(); //needs double rotate (2nd is larger on left)
+			return z->rotate_left();
 		}
       }
 
