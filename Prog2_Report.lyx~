@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.1
 \lyxformat 474
 \begin_document
 \begin_header
@@ -76,6 +76,8 @@
 
 \series bold
 Programming 2 Assignment
+\series default
+
 \end_layout
 
 \begin_layout Author
@@ -100,10 +102,6 @@ March 11, 2016
 
 \begin_layout Section*
 Introduction
-\end_layout
-
-\begin_layout Standard
-sadlfkjsdaflkdfasldkafsjfadlkjs
 \end_layout
 
 \end_body
