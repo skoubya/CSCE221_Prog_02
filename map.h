@@ -194,7 +194,7 @@ class map {
     Value& operator[](const Key& k) {
       /// @todo implement at function. Utilize inserter function.
 	  
-	  iterator it = insert(value_type(k, mapped_type())).first; //insert w/ key k and default value if not there
+	  iterator it = inserter(value_type(k, mapped_type())).first; //insert w/ key k and default value if not there
 	  return it->second;
     }
 
@@ -260,6 +260,7 @@ class map {
     std::pair<iterator, bool> insert(const value_type& v) {
       /// @todo Implement insert. Utilize inserter helper.
 	  std::pair<node*, bool> ans = inserter(v); //gets answer from inserter
+	  if (!ans.second) (ans.first)->replace(v); //if exists, replace value
       return std::make_pair(iterator(ans.first), ans.second); //returns ans except node changed to iterator
     }
     /// @brief Remove element at specified position
