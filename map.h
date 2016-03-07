@@ -260,7 +260,6 @@ class map {
     std::pair<iterator, bool> insert(const value_type& v) {
       /// @todo Implement insert. Utilize inserter helper.
 	  std::pair<node*, bool> ans = inserter(v); //gets answer from inserter
-	  if (ans.second) sz++;  //if element add worked add to size
       return std::make_pair(iterator(ans.first), ans.second); //returns ans except node changed to iterator
     }
     /// @brief Remove element at specified position
@@ -269,9 +268,12 @@ class map {
     ///         one
     iterator erase(const_iterator position) {
     /// @todo this...
-      node* temp = position.n; //extract node
-	  sz--; //reduce size
-      return iterator(eraser(temp)); //make type change explicit
+	  if (position != cend())
+	  {
+		node* temp = position.n; //extract node
+		return iterator(eraser(temp)); //make type change explicit
+	  }
+	  return end(); //return end because they gave us cend and the return isn't constant
     }
     /// @brief Remove element at specified position
     /// @param k Key
@@ -279,15 +281,14 @@ class map {
     size_t erase(const Key& k) {
       /// @todo Implement erase. Utilize finder and eraser helpers.
       node* temp = finder(k); //find node with same key
-	  try
+	  if(temp->is_internal())
 	  {
 		eraser(temp);
-		sz--; //reduce size
-		return 1; //no exception so an element was deleted
+		return 1; //element was deleted
 	  }
-	  catch(std::out_of_range)
+	  else
 	  {
-		return 0; // tried deleteing non-existant element so no deletion
+		return 0; //no deletion
 	  }
     }
     /// @brief Removes all elements
@@ -346,14 +347,7 @@ class map {
     /// only return 1 or 0.
     size_t count(const Key& k) const {
       /// @todo Implement count. Utilize the find operation.
-	  if(find(k) == cend()) //not found
-	  {
-		return 0;
-	  }
-	  else
-	  {
-		return 1;
-	  }
+	  return !(find(k) == cend()); //1 if found 0 if not
     }
 
     /// @}
@@ -420,6 +414,7 @@ class map {
 			temp->set_height(); //adjust node height
 			temp = temp->parent;
 		  }while(!temp->is_root());
+		  sz++; //change size
 		  n->rebalance(); //fix misbalances
 		  return std::make_pair(n, true);
 	  }
@@ -439,14 +434,9 @@ class map {
       
       //using find() to first see if node n even exists
       //(might not be correct? should I be using some variant of find()? - GH)
-      if (n->is_external())
+      if (n->is_internal()) //else do nothing
       {
-		throw std::out_of_range("Key doesn't Exist");//possibly incorrect throw
-      }
-      
-      else
-      {
-        //then node n exists, and we enter the next logic loop
+        //then node n exists, and we enter the next logic block
 		node* ans = nullptr; //value to be returned (temporarily nullptr)
         if ((n->left)->is_external())
         {
@@ -463,9 +453,11 @@ class map {
           n->replace(y->value);
           ans = x->remove_above_external(); //returns inorder next
         }
+		sz--;
 		ans->rebalance(); //fixes misbalances
 		return ans;
       }
+	  return n; //return external nodes (don't have anything else to do with them
  
     }
 
@@ -634,9 +626,10 @@ class map {
 		{
 			if (!z->balanced()) 
 			{
-				(z->tall_grand_child())->restructure(); //function works on unbalanced node's tallest grandchild
+				z = (z->tall_grand_child())->restructure(); //function works on unbalanced node's tallest grandchild
 			}
 			z = z->parent;
+			//std::cout<<"is_root() = "<<z->is_root()<<std::endl;
 			z->set_height(); //adjust heights as goes up
 		}
       }
