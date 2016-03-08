@@ -1,0 +1,8 @@
+01: None 00.0: 10102 Main Memory
+  [Created at memory.74]
+  Unique ID: rdCR.CxwsZFjVASF
+  Hardware Class: memory
+  Model: "Main Memory"
+  Memory Range: 0x00000000-0x17fd28bfff (rw)
+  Memory Size: 96 GB
+  Config Status: cfg=new, avail=yes, need=no, active=unknown

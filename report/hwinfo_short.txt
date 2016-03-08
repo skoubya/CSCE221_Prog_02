@@ -1,0 +1,192 @@
+cpu:
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+                       Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz, 2000 MHz
+keyboard:
+  /dev/input/event2    Avocent HP 336047-B21
+  /dev/input/event4    Avocent Keyboard/Mouse Function
+mouse:
+  /dev/input/mice      Avocent HP 336047-B21
+  /dev/input/mice      Avocent Keyboard/Mouse Function
+graphics card:
+                       Matrox G200 eR
+storage:
+                       Intel C600/X79 series chipset 6-Port SATA AHCI Controller
+                       Dell PERC H710 Mini (for monolithics)
+network:
+  em3                  Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe
+  em4                  Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe
+  em1                  Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe
+  em2                  Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe
+network interface:
+  lo                   Loopback network interface
+  em1                  Ethernet network interface
+  em2                  Ethernet network interface
+  em3                  Ethernet network interface
+  em4                  Ethernet network interface
+disk:
+  /dev/sda             DELL PERC H710
+  /dev/sdb             iDRAC Virtual Net File
+  /dev/sdc             iDRAC Virtual Floppy
+partition:
+  /dev/sda1            Partition
+  /dev/sda2            Partition
+cdrom:
+  /dev/sr0             iDRAC Virtual CD
+usb controller:
+                       Intel C600/X79 series chipset USB2 Enhanced Host Controller #2
+                       Intel C600/X79 series chipset USB2 Enhanced Host Controller #1
+bios:
+                       BIOS
+bridge:
+                       Intel Xeon E5/Core i7 DMI2
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 1a
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 1b
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 2a
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 2c
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode
+                       Intel C600/X79 series chipset PCI Express Virtual Root Port
+                       Intel C600/X79 series chipset PCI Express Root Port 1
+                       Intel C600/X79 series chipset PCI Express Root Port 8
+                       Intel 82801 PCI Bridge
+                       Intel C600/X79 series chipset LPC Controller
+                       Renesas SH7757 PCIe Switch [PS]
+                       Renesas SH7757 PCIe Switch [PS]
+                       Renesas SH7757 PCIe Switch [PS]
+                       Renesas SH7757 PCIe-PCI Bridge [PPB]
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 1a
+                       Intel Xeon E5/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode
+hub:
+                       Linux 3.0.101-0.47.71-default ehci_hcd EHCI Host Controller
+                       Linux 3.0.101-0.47.71-default ehci_hcd EHCI Host Controller
+                       Hub
+                       Hub
+                       Avocent Gadget USB HUB
+memory:
+                       Main Memory
+unknown:
+                       FPU
+                       DMA controller
+                       PIC
+                       Timer
+                       Keyboard controller
+                       Intel Xeon E5/Core i7 Address Map, VTd_Misc, System Management
+                       Intel Xeon E5/Core i7 Control Status and Global Errors
+                       Intel C600/X79 series chipset MEI Controller #1
+                       Intel C600/X79 series chipset MEI Controller #2
+                       Intel Xeon E5/Core i7 Address Map, VTd_Misc, System Management
+                       Intel Xeon E5/Core i7 Control Status and Global Errors
+                       Intel Xeon E5/Core i7 QPI Link 0
+                       Intel Xeon E5/Core i7 QPI Link 1
+                       Intel Xeon E5/Core i7 Power Control Unit 0
+                       Intel Xeon E5/Core i7 Power Control Unit 1
+                       Intel Xeon E5/Core i7 Power Control Unit 2
+                       Intel Xeon E5/Core i7 Power Control Unit 3
+                       Intel Xeon E5/Core i7 Interrupt Control Registers
+                       Intel Xeon E5/Core i7 Semaphore and Scratchpad Configuration Registers
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller System Address Decoder 0
+                       Intel Xeon E5/Core i7 System Address Decoder
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller System Address Decoder 1
+                       Intel Xeon E5/Core i7 Processor Home Agent
+                       Intel Xeon E5/Core i7 Processor Home Agent Performance Monitoring
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Registers
+                       Intel Xeon E5/Core i7 Integrated Memory Controller RAS Registers
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 3
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 4
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 3
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 3
+                       Intel Xeon E5/Core i7 DDRIO
+                       Intel Xeon E5/Core i7 R2PCIe
+                       Intel Xeon E5/Core i7 Ring to PCI Express Performance Monitor
+                       Intel Xeon E5/Core i7 QuickPath Interconnect Agent Ring Registers
+                       Intel Xeon E5/Core i7 Ring to QuickPath Interconnect Link 0 Performance Monitor
+                       Intel Xeon E5/Core i7 Ring to QuickPath Interconnect Link 1 Performance Monitor
+                       Intel Xeon E5/Core i7 QPI Link 0
+                       Intel Xeon E5/Core i7 QPI Link 1
+                       Intel Xeon E5/Core i7 Power Control Unit 0
+                       Intel Xeon E5/Core i7 Power Control Unit 1
+                       Intel Xeon E5/Core i7 Power Control Unit 2
+                       Intel Xeon E5/Core i7 Power Control Unit 3
+                       Intel Xeon E5/Core i7 Interrupt Control Registers
+                       Intel Xeon E5/Core i7 Semaphore and Scratchpad Configuration Registers
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller System Address Decoder 0
+                       Intel Xeon E5/Core i7 System Address Decoder
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Unicast Register 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller System Address Decoder 1
+                       Intel Xeon E5/Core i7 Processor Home Agent
+                       Intel Xeon E5/Core i7 Processor Home Agent Performance Monitoring
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Registers
+                       Intel Xeon E5/Core i7 Integrated Memory Controller RAS Registers
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 3
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Target Address Decoder 4
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 0
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 1
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller Channel 0-3 Thermal Control 3
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 2
+                       Intel Xeon E5/Core i7 Integrated Memory Controller ERROR Registers 3
+                       Intel Xeon E5/Core i7 DDRIO
+                       Intel Xeon E5/Core i7 R2PCIe
+                       Intel Xeon E5/Core i7 Ring to PCI Express Performance Monitor
+                       Intel Xeon E5/Core i7 QuickPath Interconnect Agent Ring Registers
+                       Intel Xeon E5/Core i7 Ring to QuickPath Interconnect Link 0 Performance Monitor
+                       Intel Xeon E5/Core i7 Ring to QuickPath Interconnect Link 1 Performance Monitor
+                       Serial controller
