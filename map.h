@@ -87,7 +87,7 @@ class map {
 
 	
 	/*Added for testing purposes*/
-	void printTree() //maybe incorrect spot
+	void printTree() 
 	{
 		size_t theHeight = (root->left)->height; //height
 		std::vector<std::string> ans(theHeight);
@@ -230,7 +230,7 @@ class map {
     const Value& at(const Key& k) const {
       /// @todo implement at function. Utilize find function.
       
-	  //should be fine because don't edit in this function
+	  //fine because don't edit in this function
 	  iterator it = find(k);
 	  if (it == cend())
 	  {
@@ -429,12 +429,7 @@ class map {
     ///
     /// Hint: will need to use functions node::inorder_next or node::leftmost,
     /// node::replace, and node::remove_above_external
-    //GH implemented this (questionably)
-    //compiles correctly with given makefile -- NO IDEA about running though
     node* eraser(node* n) {
-      
-      //using find() to first see if node n even exists
-      //(might not be correct? should I be using some variant of find()? - GH)
       if (n->is_internal()) //else do nothing
       {
         //then node n exists, and we enter the next logic block
@@ -458,7 +453,7 @@ class map {
 		ans->rebalance(); //fixes misbalances
 		return ans;
       }
-	  return n; //return external nodes (don't have anything else to do with them
+	  return n; //return external nodes (don't have anything else to do with them)
  
     }
 
@@ -505,8 +500,6 @@ class map {
 			right = new node(*n.right);
 			right->parent = this;
 		}
-		
-		//std::cout<<'\t'<<n.height<<std::endl; //added by me
       }
 
       /// @brief Copy assignment - Deleted
@@ -630,7 +623,6 @@ class map {
 				z = (z->tall_grand_child())->restructure(); //function works on unbalanced node's tallest grandchild
 			}
 			z = z->parent;
-			//std::cout<<"is_root() = "<<z->is_root()<<std::endl;
 			z->set_height(); //adjust heights as goes up
 		}
       }
@@ -647,7 +639,7 @@ class map {
         /// @todo Implement restructuring
 		node* y = parent; //name so don't lose after rotate
 		node* z = y->parent; //name so don't lose after rotate
-		//x is this
+		//x is "this"
 		if (y == z->left) //larger on left
 		{
 			if (this == y->right) y->rotate_left(); //needs double rotate (2nd is larger on right)
