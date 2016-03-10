@@ -1,0 +1,5 @@
+sizes tested for non-selfbalancing:
+
+linear-15
+log-20
+random-20
