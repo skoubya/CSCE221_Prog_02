@@ -5,12 +5,22 @@
 \textclass article
 \begin_preamble
 \usepackage{graphicx}
+
+
+
+
+
+
+
+
+
+
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package none
-\inputencoding auto
+\inputencoding iso8859-15
 \fontencoding default
 \font_roman default
 \font_sans default
@@ -89,19 +99,57 @@ Gerald Hu, Aaron Skouby
 \begin_inset Newline newline
 \end_inset
 
-CSCE 221-200
+ CSCE 221-200
 \end_layout
 
 \begin_layout Date
 March 11, 2016
 \end_layout
 
-\begin_layout Standard
- 
+\begin_layout Section*
+Introduction
 \end_layout
 
 \begin_layout Section*
-Introduction
+Implementation Details
+\end_layout
+
+\begin_layout Section*
+Theoretical Assignment
+\end_layout
+
+\begin_layout Section*
+Experimental Setup
+\end_layout
+
+\begin_layout Standard
+Timing tests were conducted using the provided timing.cpp, compiled with the provided makefile's commands. Compilation was done with G++, version 4.7.3 (SUSE Linux), set to the C++11 standard, with the -G flag enabled and O2 optimization level, and warnings set to -Wall -Werror (all warnings treated as compilation errors).
+\end_layout
+
+\begin_layout Standard
+Tests were run on the "compute.cse.tamu.edu" server, which runs Arch Linux x8664 (
+\end_layout
+
+\begin_layout Section*
+Results and Discussion
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Timing w/ and w/o rebalancing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Conclusion
 \end_layout
 
 \end_body

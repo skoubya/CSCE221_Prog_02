@@ -103,7 +103,7 @@ Implementation Details
 \end_layout
 
 \begin_layout Section*
-Theoretical Analysis
+Theoretical Assignment
 \end_layout
 
 \begin_layout Section*
@@ -153,9 +153,12 @@ Timing functions output timings for input sizes that were powers of 2, starting
  from 2 itself, and ending at a maximum size specified by the user.
  Each step of the timing was repeated 10 times, and the average of each
  result taken.
- Linear height n inserts went up to a maximum input size of 32768; logarithmic
- height n inserts went up to a maximum input size of 4194304, and random
- n inserts went up to a maximum input size of 1048576.
+ Linear height n inserts went up to 
+\end_layout
+
+\begin_layout Standard
+\noindent
+dasfds TODO:# of trials, data sizes
 \end_layout
 
 \begin_layout Section*
