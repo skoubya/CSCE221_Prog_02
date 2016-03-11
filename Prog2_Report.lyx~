@@ -1,19 +1,9 @@
-#LyX file created by tex2lyx 2.1
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 474
 \begin_document
 \begin_header
 \textclass article
 \begin_preamble
-\usepackage{graphicx}
-
-
-
-
-
-
-
-
-
 
 \end_preamble
 \use_default_options false
@@ -86,8 +76,6 @@
 
 \series bold
 Programming 2 Assignment
-\series default
-
 \end_layout
 
 \begin_layout Author
@@ -110,12 +98,123 @@ March 11, 2016
 Introduction
 \end_layout
 
+\begin_layout Standard
+The purpose of this assignment was to further understanding of data structures
+ and implementations that were discussed in class.
+ Specifically, the project explored implementing a map ADT using a binary
+ tree.
+ The performance of the operations of the map were analayzed for both a
+ normal binary tree implementation and an AVL binary tree implementation.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Implementation Details
 \end_layout
 
+\begin_layout Standard
+The map was implemented with a binary search tree, using the AVL method
+ of self-balancing.
+ The tree had node data members, a size_t 
+\begin_inset Quotes eld
+\end_inset
+
+sz
+\begin_inset Quotes erd
+\end_inset
+
+ which kept track of the size of the tree, special 
+\begin_inset Quotes eld
+\end_inset
+
+leaf
+\begin_inset Quotes erd
+\end_inset
+
+ nodes at the end of each branch (null pointers), and a special 
+\begin_inset Quotes eld
+\end_inset
+
+superroot
+\begin_inset Quotes erd
+\end_inset
+
+ node whose left subtree was the main tree (this superroot's parent was
+ null).
+ Each node of the tree stored pointers to its parent, left child, and right
+ child, as well as storing a pair called 
+\begin_inset Quotes eld
+\end_inset
+
+value
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This pair was the main data element of the node, storing the key/index
+ in its first position, and the data value in its second position; pair
+ used the standard template library.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The map had two erase functions, one which took a key, one which took an
+ iterator for position.
+ These would take a key or iterator and find the desired node, and would
+ get a pointer to it.
+ Then, it would pass the node pointer to a helper function eraser(node*
+ n), which would find the node (or otherwise do nothing), remove it, place
+ the child in the proper position, and return the next in-order node.
+ Insert functions were implemented similarly--two insert functions, one
+ taking a key, one taking an iterator, and both being based on a helper
+ function inserter.
+ The inserter function would take a key and value, and would either construct
+ a new node and add it to the map; or, in the case where the key already
+ existed in a map, replace that key's value with the new value.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The map's size was automatically adjusted by the helper functions eraser()
+ and inserter() when needed.
+ Both eraser() and inserter() called rebalance() to fix tree imbalances
+ after doing their respective operation.
+ Rebalance() would scan up the tree to find imbalances, and call the restructure
+() function on them, making appropriate left or right rotations.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Timing.cpp was essentially unchanged from the code provided by the instructors.
+ The timing function was already implemented, and for the most part our
+ tests simply changed the parameters of the function.
+ This timing function relies on high_resolution_clock; given a map and a
+ number, the function would repeatedly push random elements into the map
+ the specified number of times.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
-Theoretical Assignment
+Theoretical Analysis
 \end_layout
 
 \begin_layout Section*
@@ -123,11 +222,69 @@ Experimental Setup
 \end_layout
 
 \begin_layout Standard
-Timing tests were conducted using the provided timing.cpp, compiled with the provided makefile's commands. Compilation was done with G++, version 4.7.3 (SUSE Linux), set to the C++11 standard, with the -G flag enabled and O2 optimization level, and warnings set to -Wall -Werror (all warnings treated as compilation errors).
+Timing tests were conducted using the provided timing.cpp, compiled with
+ the provided makefile's commands.
+ Compilation was done on the 
+\begin_inset Quotes eld
+\end_inset
+
+linux.cse.tamu.edu
+\begin_inset Quotes erd
+\end_inset
+
+ server, with G++ version 4.7.3 (SUSE Linux) (found via g++ --version).
+ Compilation was set to the C++11 standard, with the -G flag enabled and
+ O2 optimization level, warnings set to -Wall -Werror (all warnings treated
+ as compilation errors), and dependencies flagged with -MMD (auto-generate
+ dependencies).
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Tests were run on the "compute.cse.tamu.edu" server, which runs Arch Linux x8664 (
+\noindent
+Tests were run on the 
+\begin_inset Quotes eld
+\end_inset
+
+compute.cse.tamu.edu
+\begin_inset Quotes erd
+\end_inset
+
+ server, which runs Arch Linux x86_64 version 8.12 (found via arch --version
+ and lsb_release -a).
+ This server has 99026668 total kilobytes of RAM (found via free).
+ It uses Intel Core i7-3970X CPUs (2 sockets, 8 cores per socket, 2 threads
+ per core), with a clock speed of 2000 mHz (found via lscpu).
+ Each core has a Xeon E5-2650 processor (found via lshw --short).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Timing functions output timings for input sizes that were powers of 2, starting
+ from 2 itself, and ending at a maximum size specified by the user.
+ Each step of the timing was repeated 10 times, and the average of each
+ result taken.
+ Linear height n inserts went up to a maximum input size of 32768; logarithmic
+ height n inserts went up to a maximum input size of 4194304, and random
+ n inserts went up to a maximum input size of 1048576.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+We ran timing.o twice, first on a tree with AVL rebalancing, and then on
+ a simpler binary tree with no rebalancing method, and compared the performance
+ of the two trees.
 \end_layout
 
 \begin_layout Section*
@@ -135,12 +292,466 @@ Results and Discussion
 \end_layout
 
 \begin_layout Standard
-
-\begin_inset ERT
-status collapsed
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
-%Timing w/ and w/o rebalancing
+\begin_inset Graphics
+	filename report/Linear_Time_Per_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken per Addition for Different Input Sizes for a Linear
+ Order Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linear_Time_Per_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Linear_Time_Per_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken for Different Input Sizes for a Linear Order Added
+ AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linear_Time_Per_AVL"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Linear_Big_O_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Linear Order
+ Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linear_Big_O_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Linear_Big_O_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Linear Order
+ Added AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linear_Big_O_AVL"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Logarithmic_Time_Per_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken per Addition for Different Input Sizes for a Logarithmic
+ Order Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logarithmic_Time_Per_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Logarithmic_Time_Per_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken for Different Input Sizes for a Logarithmic Order
+ Added AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logarithmic_Time_Per_AVL"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Logarithmic_Big_O_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Logarithmic
+ Order Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logarithmic_Big_O_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Logarithmic_Big_O_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Logarithmic
+ Order Added AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logarithmic_Big_O_AVL"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Random_Time_Per_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken per Addition for Different Input Sizes for a Random
+ Order Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Random_Time_Per_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Random_Time_Per_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Time Taken for Different Input Sizes for a Random Order Added
+ AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Random_Time_Per_AVL"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Random_Big_O_(Binary).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Random Order
+ Added Binary Search Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Random_Big_O_Binary"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename report/Random_Big_O_(AVL).jpg
+	width 11cm
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graph of the Big O Constants for Different Input Sizes for a Random Order
+ Added AVL Tree
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Random_Big_O_AVL"
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
