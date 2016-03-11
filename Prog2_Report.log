@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.4)  10 MAR 2016 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.4)  11 MAR 2016 01:01
 entering extended mode
 **"Q:/CSCE 221/CSCE221/CSCE221_Prog_02/Prog2_Report.tex"
 ("Q:/CSCE 221/CSCE221/CSCE221_Prog_02/Prog2_Report.tex"
@@ -159,22 +159,156 @@ Overfull \hbox (9.3248pt too wide) in paragraph at lines 38--45
 
 [1
 
-{C:/Users/Aaron/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(Prog2_Report.aux) ) 
+{C:/Users/Aaron/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<report/Linear_Time_Per_(Binary).jpg, id=8, 548.0475pt x 398.08725pt>
+File: report/Linear_Time_Per_(Binary).jpg Graphic file (type jpg)
+
+<use report/Linear_Time_Per_(Binary).jpg>
+Package pdftex.def Info: report/Linear_Time_Per_(Binary).jpg used on input line
+ 66.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+<report/Linear_Time_Per_(AVL).jpg, id=9, 548.0475pt x 398.08725pt>
+File: report/Linear_Time_Per_(AVL).jpg Graphic file (type jpg)
+
+<use report/Linear_Time_Per_(AVL).jpg>
+Package pdftex.def Info: report/Linear_Time_Per_(AVL).jpg used on input line 71
+.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Linear_Big_O_(Binary).jpg, id=10, 548.0475pt x 398.08725pt>
+File: report/Linear_Big_O_(Binary).jpg Graphic file (type jpg)
+
+<use report/Linear_Big_O_(Binary).jpg>
+Package pdftex.def Info: report/Linear_Big_O_(Binary).jpg used on input line 76
+.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Linear_Big_O_(AVL).jpg, id=11, 548.0475pt x 398.08725pt>
+File: report/Linear_Big_O_(AVL).jpg Graphic file (type jpg)
+
+<use report/Linear_Big_O_(AVL).jpg>
+Package pdftex.def Info: report/Linear_Big_O_(AVL).jpg used on input line 81.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Logarithmic_Time_Per_(Binary).jpg, id=12, 548.0475pt x 398.08725pt>
+File: report/Logarithmic_Time_Per_(Binary).jpg Graphic file (type jpg)
+
+<use report/Logarithmic_Time_Per_(Binary).jpg>
+Package pdftex.def Info: report/Logarithmic_Time_Per_(Binary).jpg used on input
+ line 86.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Logarithmic_Time_Per_(AVL).jpg, id=13, 548.0475pt x 398.08725pt>
+File: report/Logarithmic_Time_Per_(AVL).jpg Graphic file (type jpg)
+
+<use report/Logarithmic_Time_Per_(AVL).jpg>
+Package pdftex.def Info: report/Logarithmic_Time_Per_(AVL).jpg used on input li
+ne 91.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Logarithmic_Big_O_(Binary).jpg, id=14, 548.0475pt x 398.08725pt>
+File: report/Logarithmic_Big_O_(Binary).jpg Graphic file (type jpg)
+
+<use report/Logarithmic_Big_O_(Binary).jpg>
+Package pdftex.def Info: report/Logarithmic_Big_O_(Binary).jpg used on input li
+ne 96.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Logarithmic_Big_O_(AVL).jpg, id=15, 548.0475pt x 398.08725pt>
+File: report/Logarithmic_Big_O_(AVL).jpg Graphic file (type jpg)
+
+<use report/Logarithmic_Big_O_(AVL).jpg>
+Package pdftex.def Info: report/Logarithmic_Big_O_(AVL).jpg used on input line 
+101.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Random_Time_Per_(Binary).jpg, id=16, 548.0475pt x 398.08725pt>
+File: report/Random_Time_Per_(Binary).jpg Graphic file (type jpg)
+
+<use report/Random_Time_Per_(Binary).jpg>
+Package pdftex.def Info: report/Random_Time_Per_(Binary).jpg used on input line
+ 106.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Random_Time_Per_(AVL).jpg, id=17, 548.0475pt x 398.08725pt>
+File: report/Random_Time_Per_(AVL).jpg Graphic file (type jpg)
+
+<use report/Random_Time_Per_(AVL).jpg>
+Package pdftex.def Info: report/Random_Time_Per_(AVL).jpg used on input line 11
+1.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Random_Big_O_(Binary).jpg, id=18, 548.0475pt x 398.08725pt>
+File: report/Random_Big_O_(Binary).jpg Graphic file (type jpg)
+
+<use report/Random_Big_O_(Binary).jpg>
+Package pdftex.def Info: report/Random_Big_O_(Binary).jpg used on input line 11
+6.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<report/Random_Big_O_(AVL).jpg, id=19, 548.0475pt x 398.08725pt>
+File: report/Random_Big_O_(AVL).jpg Graphic file (type jpg)
+
+<use report/Random_Big_O_(AVL).jpg>
+Package pdftex.def Info: report/Random_Big_O_(AVL).jpg used on input line 121.
+(pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./report/Linear_Time_Per_(Binary).jpg>] [3 <./report/Linear_Time_Per_(AVL).
+jpg> <./report/Linear_Big_O_(Binary).jpg>] [4 <./report/Linear_Big_O_(AVL).jpg>
+ <./report/Logarithmic_Time_Per_(Binary).jpg>] [5 <./report/Logarithmic_Time_Pe
+r_(AVL).jpg> <./report/Logarithmic_Big_O_(Binary).jpg>] [6 <./report/Logarithmi
+c_Big_O_(AVL).jpg> <./report/Random_Time_Per_(Binary).jpg>] [7 <./report/Random
+_Time_Per_(AVL).jpg> <./report/Random_Big_O_(Binary).jpg>] [8 <./report/Random_
+Big_O_(AVL).jpg>] (Prog2_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 1761 strings out of 493673
- 22112 string characters out of 3143960
- 81740 words of memory out of 3000000
- 5128 multiletter control sequences out of 15000+200000
+ 1836 strings out of 493673
+ 24613 string characters out of 3143960
+ 82839 words of memory out of 3000000
+ 5189 multiletter control sequences out of 15000+200000
  8261 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,20p,413b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Prog2_Report.pdf (2 pages, 51962 bytes).
+ 27i,6n,20p,413b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb>
+Output written on Prog2_Report.pdf (8 pages, 824014 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
