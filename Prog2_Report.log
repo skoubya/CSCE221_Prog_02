@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.4)  11 MAR 2016 08:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.4)  11 MAR 2016 13:45
 entering extended mode
 **"Q:/CSCE 221/CSCE221/CSCE221_Prog_02/Prog2_Report.tex"
 ("Q:/CSCE 221/CSCE221/CSCE221_Prog_02/Prog2_Report.tex"
@@ -120,18 +120,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@width=\dimen113
 )
 (Prog2_Report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 (C:\Users\Aaron\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -147,70 +147,75 @@ LaTeX Font Info:    ... okay on input line 8.
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks23
 )
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 46--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 58--71
 
  []
 
 [1
 
 {C:/Users/Aaron/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 73--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--43
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 94--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 113--121
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 123--136
 
  []
 
 
-Overfull \hbox (9.3248pt too wide) in paragraph at lines 63--70
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+
+ []
+
+
+Overfull \hbox (9.3248pt too wide) in paragraph at lines 148--155
 \OT1/cmr/m/n/10 pro-vided make-file's com-mands. Com-pi-la-tion was done on the
  ``linux.cse.tamu.edu''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--70
+Underfull \hbox (badness 10000) in paragraph at lines 148--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--79
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--88
+Underfull \hbox (badness 10000) in paragraph at lines 166--173
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 182--190
 
  []
 
@@ -219,15 +224,15 @@ File: report/Linear_Time_Per_(Binary).jpg Graphic file (type jpg)
 
 <use report/Linear_Time_Per_(Binary).jpg>
 Package pdftex.def Info: report/Linear_Time_Per_(Binary).jpg used on input line
- 99.
+ 193.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 <report/Linear_Time_Per_(AVL).jpg, id=22, 548.0475pt x 398.08725pt>
 File: report/Linear_Time_Per_(AVL).jpg Graphic file (type jpg)
 
 <use report/Linear_Time_Per_(AVL).jpg>
-Package pdftex.def Info: report/Linear_Time_Per_(AVL).jpg used on input line 10
-6.
+Package pdftex.def Info: report/Linear_Time_Per_(AVL).jpg used on input line 20
+0.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
@@ -237,8 +242,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: report/Linear_Big_O_(Binary).jpg Graphic file (type jpg)
 
 <use report/Linear_Big_O_(Binary).jpg>
-Package pdftex.def Info: report/Linear_Big_O_(Binary).jpg used on input line 11
-3.
+Package pdftex.def Info: report/Linear_Big_O_(Binary).jpg used on input line 20
+7.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
@@ -248,24 +253,28 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: report/Linear_Big_O_(AVL).jpg Graphic file (type jpg)
 
 <use report/Linear_Big_O_(AVL).jpg>
-Package pdftex.def Info: report/Linear_Big_O_(AVL).jpg used on input line 120.
+Package pdftex.def Info: report/Linear_Big_O_(AVL).jpg used on input line 214.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 220--233
 
  []
 
 [4 <./report/Linear_Time_Per_(Binary).jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 235--249
+
+ []
+
 <report/Logarithmic_Time_Per_(Binary).jpg, id=28, 548.0475pt x 398.08725pt>
 File: report/Logarithmic_Time_Per_(Binary).jpg Graphic file (type jpg)
 
 <use report/Logarithmic_Time_Per_(Binary).jpg>
 Package pdftex.def Info: report/Logarithmic_Time_Per_(Binary).jpg used on input
- line 129.
+ line 252.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
@@ -276,7 +285,7 @@ File: report/Logarithmic_Time_Per_(AVL).jpg Graphic file (type jpg)
 
 <use report/Logarithmic_Time_Per_(AVL).jpg>
 Package pdftex.def Info: report/Logarithmic_Time_Per_(AVL).jpg used on input li
-ne 137.
+ne 260.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
@@ -287,7 +296,7 @@ File: report/Logarithmic_Big_O_(Binary).jpg Graphic file (type jpg)
 
 <use report/Logarithmic_Big_O_(Binary).jpg>
 Package pdftex.def Info: report/Logarithmic_Big_O_(Binary).jpg used on input li
-ne 144.
+ne 267.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
@@ -298,91 +307,105 @@ File: report/Logarithmic_Big_O_(AVL).jpg Graphic file (type jpg)
 
 <use report/Logarithmic_Big_O_(AVL).jpg>
 Package pdftex.def Info: report/Logarithmic_Big_O_(AVL).jpg used on input line 
-151.
+274.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 280--292
 
  []
 
 [5 <./report/Linear_Time_Per_(AVL).jpg>]
-<report/Random_Time_Per_(Binary).jpg, id=35, 548.0475pt x 398.08725pt>
+Underfull \hbox (badness 10000) in paragraph at lines 294--312
+
+ []
+
+[6 <./report/Linear_Big_O_(Binary).jpg>]
+<report/Random_Time_Per_(Binary).jpg, id=38, 548.0475pt x 398.08725pt>
 File: report/Random_Time_Per_(Binary).jpg Graphic file (type jpg)
 
 <use report/Random_Time_Per_(Binary).jpg>
 Package pdftex.def Info: report/Random_Time_Per_(Binary).jpg used on input line
- 161.
+ 315.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<report/Random_Time_Per_(AVL).jpg, id=36, 548.0475pt x 398.08725pt>
+<report/Random_Time_Per_(AVL).jpg, id=39, 548.0475pt x 398.08725pt>
 File: report/Random_Time_Per_(AVL).jpg Graphic file (type jpg)
 
 <use report/Random_Time_Per_(AVL).jpg>
-Package pdftex.def Info: report/Random_Time_Per_(AVL).jpg used on input line 16
-8.
+Package pdftex.def Info: report/Random_Time_Per_(AVL).jpg used on input line 32
+2.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<report/Random_Big_O_(Binary).jpg, id=37, 548.0475pt x 398.08725pt>
+<report/Random_Big_O_(Binary).jpg, id=40, 548.0475pt x 398.08725pt>
 File: report/Random_Big_O_(Binary).jpg Graphic file (type jpg)
 
 <use report/Random_Big_O_(Binary).jpg>
-Package pdftex.def Info: report/Random_Big_O_(Binary).jpg used on input line 17
-5.
+Package pdftex.def Info: report/Random_Big_O_(Binary).jpg used on input line 32
+9.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<report/Random_Big_O_(AVL).jpg, id=38, 548.0475pt x 398.08725pt>
+<report/Random_Big_O_(AVL).jpg, id=41, 548.0475pt x 398.08725pt>
 File: report/Random_Big_O_(AVL).jpg Graphic file (type jpg)
 
 <use report/Random_Big_O_(AVL).jpg>
-Package pdftex.def Info: report/Random_Big_O_(AVL).jpg used on input line 182.
+Package pdftex.def Info: report/Random_Big_O_(AVL).jpg used on input line 336.
 (pdftex.def)             Requested size: 312.9803pt x 227.34335pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 342--348
 
  []
 
-[6 <./report/Linear_Big_O_(Binary).jpg>] [7 <./report/Linear_Big_O_(AVL).jpg>]
-[8 <./report/Logarithmic_Time_Per_(Binary).jpg>] [9 <./report/Logarithmic_Time_
-Per_(AVL).jpg>] [10 <./report/Logarithmic_Big_O_(Binary).jpg> <./report/Logarit
-hmic_Big_O_(AVL).jpg>] [11 <./report/Random_Time_Per_(Binary).jpg> <./report/Ra
-ndom_Time_Per_(AVL).jpg>] [12 <./report/Random_Big_O_(Binary).jpg> <./report/Ra
-ndom_Big_O_(AVL).jpg>] (Prog2_Report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--375
+
+ []
+
+[7 <./report/Linear_Big_O_(AVL).jpg>] [8 <./report/Logarithmic_Time_Per_(Binary
+).jpg>] [9 <./report/Logarithmic_Time_Per_(AVL).jpg>] [10 <./report/Logarithmic
+_Big_O_(Binary).jpg> <./report/Logarithmic_Big_O_(AVL).jpg>] [11 <./report/Rand
+om_Time_Per_(Binary).jpg> <./report/Random_Time_Per_(AVL).jpg>] [12 <./report/R
+andom_Big_O_(Binary).jpg> <./report/Random_Big_O_(AVL).jpg>] (Prog2_Report.aux)
+ ) 
 Here is how much of TeX's memory you used:
  1839 strings out of 493673
  24645 string characters out of 3143960
- 88845 words of memory out of 3000000
+ 84845 words of memory out of 3000000
  5191 multiletter control sequences out of 15000+200000
  8715 words of font info for 32 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,20p,2240b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Prog2_Report.pdf (12 pages, 895510 bytes).
+ 27i,6n,20p,278b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Prog2_Report.pdf (12 pages, 895673 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
